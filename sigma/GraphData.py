@@ -205,9 +205,9 @@ def convertToGraph(smi_lst, Coordinate, All_Atoms):
         features.append(np.array(iFeatureTmp))
         adj.append(iAdjTmp)
 
-    print(features)
-    features = np.asarray(features)
-    edge_features = np.asarray(edge_features)
+    # print(features)
+    features = np.array(features)
+    edge_features = np.array(edge_features)
     return adj, features, edge_features
 
 
