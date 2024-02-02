@@ -202,8 +202,6 @@ def convertToGraph(smi_lst, Coordinate, All_Atoms):
             iFeatureTmp.append(
                 atom_feature(atom, INDEX, Coordinate, All_Atoms, Atom_radius, Atom_mass)
             )
-        print("iFeatureTmp:", np.array(iFeatureTmp), "/n")
-        print("iFeatureTmp shape:", np.array(iFeatureTmp).shape)
         features.append(np.array(iFeatureTmp))
         adj.append(iAdjTmp)
 
