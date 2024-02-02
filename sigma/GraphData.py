@@ -3,11 +3,9 @@ import numpy as np
 import rdkit.Chem as Chem
 from rdkit.Chem import AllChem
 from spektral.data import Dataset, Graph
-import pickle
 import sigma.parameter as parameter
 
 from tqdm import *
-import time, random
 import sys
 
 
@@ -207,6 +205,7 @@ def convertToGraph(smi_lst, Coordinate, All_Atoms):
         features.append(np.array(iFeatureTmp))
         adj.append(iAdjTmp)
 
+    print(features)
     features = np.asarray(features)
     edge_features = np.asarray(edge_features)
     return adj, features, edge_features
